@@ -1,4 +1,5 @@
 import 'package:cleaner/pages/login_signup/register.dart';
+import 'package:cleaner/pages/start.dart';
 import 'package:flutter/material.dart';
 
 class MyLogin extends StatefulWidget {
@@ -80,7 +81,14 @@ class _MyLoginState extends State<MyLogin> {
                                 backgroundColor: Color(0xff4c505b),
                                 child: IconButton(
                                     color: Colors.white,
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => StartPage(),
+                                        ),
+                                      );
+                                    },
                                     icon: Icon(
                                       Icons.arrow_forward,
                                     )),
